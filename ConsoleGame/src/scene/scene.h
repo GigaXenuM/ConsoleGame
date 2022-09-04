@@ -10,7 +10,7 @@ public:
 
 	void run();
 
-	void addPlayer(std::vector<char> controllKeys);
+	void addPlayer(const std::vector<char>& controllKeys);
 private:
 	void addBitCoins();
 

@@ -11,10 +11,10 @@ public:
 	Player(Point position, std::vector<char> controllKeys);
 
 	void setPosition(Point position) override;
-	Point position() override;
+	Point position() const override;
 
 	void setControllKeys(char left, char right, char down, char up);
-	std::vector<char> controllKeys();
+	std::vector<char> controllKeys() const;
 
 private:
 	Point _position;

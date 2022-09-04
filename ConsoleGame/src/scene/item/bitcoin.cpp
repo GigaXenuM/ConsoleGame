@@ -11,12 +11,12 @@ void BitCoin::setPosition(Point position)
 	_position = std::move(position);
 }
 
-Point BitCoin::position()
+Point BitCoin::position() const
 {
-    return _position;
+	return _position;
 }
 
-int BitCoin::pointCount()
+int BitCoin::pointCount() const
 {
 	return _pointCount;
 }

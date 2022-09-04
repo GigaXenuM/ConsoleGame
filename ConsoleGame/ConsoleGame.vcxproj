@@ -139,12 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\scene\item\bitcoin.cpp" />
     <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\scene\player.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\scene\item\bitcoin.h" />
     <ClInclude Include="src\scene\item\iitem.h" />
+    <ClInclude Include="src\scene\item\point.h" />
     <ClInclude Include="src\scene\scene.h" />
     <ClInclude Include="src\scene\player.h" />
   </ItemGroup>

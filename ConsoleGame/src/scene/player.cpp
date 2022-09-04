@@ -10,7 +10,7 @@ void Player::setPosition(Point position)
 	_position = std::move(position);
 }
 
-Point Player::position()
+Point Player::position() const
 {
 	return _position;
 }
@@ -21,7 +21,7 @@ void Player::setControllKeys(char left, char right, char down, char up)
 	_controllKeys = { left , right , down , up };
 }
 
-std::vector<char> Player::controllKeys()
+std::vector<char> Player::controllKeys() const
 {
 	return _controllKeys;
 }

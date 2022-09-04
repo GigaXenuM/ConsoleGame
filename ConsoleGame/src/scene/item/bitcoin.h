@@ -9,9 +9,9 @@ public:
 	BitCoin(Point position, int pointCount);
 
 	void setPosition(Point position) override;
-	Point position() override;
+	Point position() const override;
 
-	int pointCount();
+	int pointCount() const;
 private:
 	int _pointCount{ 0 };
 	Point _position;
