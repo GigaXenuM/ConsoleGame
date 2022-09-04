@@ -1,7 +1,6 @@
 #pragma once
-
-#include <thread>
-#include "player.h"
+#include "item/iitem.h"
+#include <vector>
 
 class Scene
 {
@@ -13,7 +12,10 @@ public:
 
 	void addPlayer(std::vector<char> controllKeys);
 private:
-	std::vector<Player*> _players;
+	void addBitCoins();
+
+	std::vector<IItem*> _players;
+	std::vector<IItem*> _bitCoins;
 	char** _gameMap{ nullptr };
 	int _width{ 0 };
 	int _height{ 0 };

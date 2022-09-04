@@ -1,7 +1,11 @@
 #include "scene.h"
 
+#include "player.h"
+#include "item/bitcoin.h"
+
 #include <iostream>
 #include <Windows.h>
+#include <thread>
 
 Scene::Scene(int width, int height) : _gameMap{ new char* [height] }, _width{ width }, _height{ height }
 {
@@ -49,8 +53,11 @@ void Scene::run()
 			std::cout << _gameMap[i] << std::endl;
 		}
 
-		for (auto player : _players)
+		for (auto item : _players)
 		{
+			auto* player{ dynamic_cast<Player*>(item) };
+			if (player == nullptr)
+				continue;
 
 			if (GetAsyncKeyState(player->controllKeys()[0]))
 			{
@@ -86,4 +93,11 @@ void Scene::run()
 void Scene::addPlayer(std::vector<char> controllKeys)
 {
 	_players.push_back(new Player({ 20, 10 }, std::move(controllKeys)));
+}
+
+void Scene::addBitCoins()
+{
+	Point position{0, 0};
+
+	_bitCoins.push_back(new BitCoin(position, 5));
 }

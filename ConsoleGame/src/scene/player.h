@@ -1,19 +1,17 @@
 #pragma once
+
+#include "item/iitem.h"
+#include "item/point.h"
+
 #include <vector>
 
-struct Point
-{
-	int x{ 0 };
-	int y{ 0 };
-};
-
-class Player
+class Player : public IItem
 {
 public:
 	Player(Point position, std::vector<char> controllKeys);
 
-	void setPosition(Point position);
-	Point position();
+	void setPosition(Point position) override;
+	Point position() override;
 
 	void setControllKeys(char left, char right, char down, char up);
 	std::vector<char> controllKeys();

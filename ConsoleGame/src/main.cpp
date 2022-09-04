@@ -4,8 +4,8 @@
 
 int main()
 {
-	Scene game;
-	game.addPlayer({ 'A', 'D', 'S', 'W' });
-	game.addPlayer({ VK_LEFT, VK_RIGHT, VK_DOWN, VK_UP });
-	game.run();
+	Scene scene;
+	scene.addPlayer({ 'A', 'D', 'S', 'W' });
+	scene.addPlayer({ VK_LEFT, VK_RIGHT, VK_DOWN, VK_UP });
+	scene.run();
 }
