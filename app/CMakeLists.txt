@@ -3,6 +3,15 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+
+include(FetchContent)
+set(BUILD_SHARED_LIBS OFF)
+FetchContent_Declare(
+ SFML
+ GIT_REPOSITORY https://github.com/SFML/SFML.git
+)
+FetchContent_MakeAvailable(SFML)
+
 # Add source to this project's executable.
 add_executable (${PROJECT_NAME})
 
@@ -20,4 +29,9 @@ target_sources(
     src/scene/item/bitcoin.cpp
 )
 
-# TODO: Add tests and install targets if needed.
+target_link_libraries(
+    ${PROJECT_NAME}
+    sfml-graphics
+    sfml-system
+    sfml-window
+)
