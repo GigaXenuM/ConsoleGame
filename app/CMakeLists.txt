@@ -3,7 +3,6 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-
 include(FetchContent)
 set(BUILD_SHARED_LIBS OFF)
 FetchContent_Declare(
@@ -11,6 +10,8 @@ FetchContent_Declare(
  GIT_REPOSITORY https://github.com/SFML/SFML.git
 )
 FetchContent_MakeAvailable(SFML)
+
+cmake_policy(SET CMP0076 NEW)
 
 # Add source to this project's executable.
 add_executable (${PROJECT_NAME})
