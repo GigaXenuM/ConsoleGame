@@ -27,6 +27,8 @@ target_sources(
     src/scene/item/point.h
     src/scene/item/bitcoin.h
     src/scene/item/bitcoin.cpp
+    src/mainwindow.h
+    src/mainwindow.cpp
 )
 
 target_link_libraries(
