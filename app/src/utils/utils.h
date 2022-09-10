@@ -2,7 +2,9 @@
 
 namespace Utils
 {
-double deltaTime()
+enum class State
 {
-}
+    Disable,
+    Enable,
+};
 } // namespace Utils
